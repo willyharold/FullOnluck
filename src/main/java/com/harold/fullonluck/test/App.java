@@ -31,6 +31,7 @@ public class App {
         tx.begin();
             Marque marque = new Marque();
             marque.setMar_nom("apple");
+            marqueDao.create(marque);
             
         tx.commit();
         
