@@ -32,6 +32,9 @@ public class Article {
     private String designation;
     
     @Column(nullable = false)
+    private String vrai_designation;
+    
+    @Column(nullable = false)
     private Double prix;
 
     @Column(nullable = false)
@@ -134,6 +137,14 @@ public class Article {
 
     public void setDate(Date date) {
         this.date = date;
+    }
+
+    public String getVrai_designation() {
+        return vrai_designation;
+    }
+
+    public void setVrai_designation(String vrai_designation) {
+        this.vrai_designation = vrai_designation;
     }
     
     
