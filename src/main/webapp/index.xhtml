@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+          
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>FullOnluck: Déblocage des téléphones, tablettes de tout type!!!</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:body style="background-color: slategrey;">
+        
+        <p:layout style="min-height: 190px;max-width: 1008px;margin: auto;background-color: slategrey;" >
+            
+            <p:layoutUnit position="center" size="190" collapsible="true" style="border: none;">
+                <div style="height:190px; background-image: url(image/entete.png);">
+                
+                   
+                </div>
+            </p:layoutUnit>
+
+        </p:layout>
+        
+
+        <p:layout style="min-height: 850px; max-width: 1008px;margin: auto;" >
+            
+
+            <p:layoutUnit position="south" size="150"  collapsible="true" header="Nous contactez!">
+                <h:outputText value="South unit content." />
+                
+            </p:layoutUnit>
+
+            <p:layoutUnit position="center" collapsible="true" style="border: none;">
+                 
+                <h:form style="float: bottom;">
+
+                    <p:menubar id="unique" style="border: none; ">
+
+                        <p:menuitem value="Accueil"  />
+
+                        <p:menuitem value="Service Imei"  />                     
+
+                        <p:menuitem value="Témoignage"   />
+
+                        <p:menuitem value="S'enregistrer"  />
+
+                        <p:menuitem value="Connexion" url="connexion/login.xhtml"  />
+
+                    </p:menubar>
+
+                </h:form>
+     
+                 <p:galleria value="#{accueilBean.images}" var="image" panelWidth="995" panelHeight="350" showCaption="true">
+                     <p:graphicImage value="image/#{image}"  title=""/>
+                 </p:galleria>
+                 <p:dataTable  var="article" id="agentTable" value="#{accueilBean.articles}" rows="6">
+
+                     <f:facet name="header">  
+                         Nouveaux services
+                     </f:facet> 
+
+                     <p:column headerText="categorie">
+                         <h:outputText value="#{article.categorie.cat_nom}" />  
+                     </p:column>
+
+                     <p:column headerText="nom">
+                         <h:outputText value="#{article.designation}" />  
+                     </p:column> 
+
+                     <p:column headerText="prix en CFA">
+                         <h:outputText value="#{article.prix}" />  
+                     </p:column> 
+
+                     <p:column headerText="date">
+                         <h:outputText value="#{article.date}" />  
+                     </p:column> 
+
+
+                 </p:dataTable>
+                   
+            </p:layoutUnit>
+
+        </p:layout>
+    </h:body>
+</html>

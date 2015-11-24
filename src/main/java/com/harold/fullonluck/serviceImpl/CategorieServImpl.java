@@ -7,17 +7,17 @@ package com.harold.fullonluck.serviceImpl;
 
 import com.harold.fullonluck.dao.CategorieDao;
 import com.harold.fullonluck.entities.Categorie;
-import com.harold.fullonluck.service.CategorieSev;
 import com.royken.generic.dao.DataAccessException;
 import java.util.List;
 import org.springframework.transaction.annotation.Transactional;
+import com.harold.fullonluck.service.CategorieServ;
 
 /**
  *
  * @author harold
  */
 @Transactional
-public class CategorieServImpl implements CategorieSev{
+public class CategorieServImpl implements CategorieServ{
     
     private CategorieDao categorieDao;
     public Categorie findByid(Long id) throws DataAccessException {

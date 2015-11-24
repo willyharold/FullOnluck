@@ -5,7 +5,7 @@
  */
 package com.harold.fullonluck.service;
 
-import com.harold.fullonluck.entities.Categorie;
+import com.harold.fullonluck.entities.Article;
 import com.royken.generic.dao.DataAccessException;
 import java.util.List;
 
@@ -13,17 +13,19 @@ import java.util.List;
  *
  * @author harold
  */
-public interface CategorieSev {
-    public Categorie findByid(Long id) throws DataAccessException;
+public interface ArticleServ {
+   
+    public Article findByid(Long id) throws DataAccessException;
     
     public void delete(Long id) throws DataAccessException;
     
-    public Categorie update(Categorie a) throws DataAccessException;
+    public Article update(Article a) throws DataAccessException;
     
-    public Categorie save(Categorie a) throws DataAccessException;
+    public Article save(Article a) throws DataAccessException;
    
-    public List<Categorie> findAll() throws DataAccessException;
+    public List<Article> findAll() throws DataAccessException;
     
     public Long size() throws DataAccessException;
+    
     
 }

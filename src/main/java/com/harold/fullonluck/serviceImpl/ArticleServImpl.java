@@ -7,17 +7,17 @@ package com.harold.fullonluck.serviceImpl;
 
 import com.harold.fullonluck.dao.ArticleDao;
 import com.harold.fullonluck.entities.Article;
-import com.harold.fullonluck.service.ArticleSev;
 import com.royken.generic.dao.DataAccessException;
 import java.util.List;
 import org.springframework.transaction.annotation.Transactional;
+import com.harold.fullonluck.service.ArticleServ;
 
 /**
  *
  * @author harold
  */
 @Transactional
-public class ArticleServImpl implements ArticleSev{
+public class ArticleServImpl implements ArticleServ{
     
     private ArticleDao articleDao;
 

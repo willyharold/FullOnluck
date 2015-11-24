@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>FullOnluck: Déblocage des téléphones, tablettes de tout type!!!</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:body style="background-color: slategrey;">
+        
+        <p:layout style="min-height: 190px;max-width: 1008px;margin: auto;background-color: slategrey;" >
+            
+            <p:layoutUnit position="center" size="190" collapsible="true" style="border: none;">
+                
+                <div style="height:190px; background-image: url(image/entete.png);">
+                                 
+                </div>
+                
+            </p:layoutUnit>
+            
+            
+        </p:layout>
+        
+        <p:layout style="min-height: 400px; max-width: 1008px;margin: auto;" >
+            
+            <p:layoutUnit position="north" size="50"  collapsible="true" style="border: none; padding: initial;">
+            
+            <h:form >
+
+                    <p:menubar id="unique" style="border: none; padding: initial; overflow-y: hidden;">
+
+                        <p:menuitem value="Accueil"  />
+
+                        <p:menuitem value="Service Imei"  />                     
+
+                        <p:menuitem value="Témoignage"   />
+
+                        <p:menuitem value="S'enregistrer"  />
+
+                        <p:menuitem value="Connexion"  />
+
+                    </p:menubar>
+
+                </h:form>
+                
+          </p:layoutUnit>
+
+
+            <p:layoutUnit position="south" size="150"  collapsible="true" header="Nous contactez!">
+                <h:outputText value="South unit content." />
+                
+            </p:layoutUnit>
+            
+            <p:layoutUnit position="center" size="100"  collapsible="true" header="authentification">
+                
+                <f:view>
+                    <h:form>
+                        <p:panelGrid columns="2">
+                            
+                            <p:outputLabel value="Login:" for="login" />
+                            <p:inputText id="login" value="#{utilisateurBean.utilisateur.login}" title="Login" required="true" requiredMessage="The Login field is required."/>
+                            <p:outputLabel value="Password:" for="password" />
+                            <p:inputText id="password" value="#{utilisateurBean.utilisateur.password}" title="Password" required="true" requiredMessage="The Password field is required."/>
+                            
+                        </p:panelGrid>
+                    </h:form>
+                </f:view>
+               
+            </p:layoutUnit>
+
+            
+                 
+                
+
+           
+
+        </p:layout>
+
+        
+    </h:body>
+
+</html>
